@@ -77,8 +77,6 @@ header {
 
 .logo {
   margin-right: 93px;
-  margin-top: 24px;
-  margin-bottom: 25px;
   color: var(--primary-text-color);
 
   font-family: Raleway, sans-serif;
@@ -93,6 +91,7 @@ header {
 
 .nav-box {
   display: flex;
+  align-items: center;
 }
 
 .site-nav {
@@ -106,8 +105,8 @@ header {
 
 .site-nav .link {
   display: block;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--primary-text-color);
 
@@ -280,15 +279,12 @@ header {
   padding-bottom: 94px;
 }
 
-.card {
-  box-shadow: var(--card-shadow);
-  padding-bottom: 30px;
-  border-radius: 0px 0px 4px 4px;
-  overflow: hidden;
-}
-
 .card-content {
   text-align: center;
+  box-shadow: var(--card-shadow);
+  border-radius: 0px 0px 4px 4px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-members {
@@ -306,9 +302,6 @@ header {
 
 .team-members .title {
   color: var(--primary-text-color);
-
-  margin-top: 30px;
-  margin-bottom: 0;
 
   font-weight: 500;
   font-size: 16px;
@@ -346,7 +339,11 @@ footer .logo {
   margin-top: 20px;
 }
 
-.studio-address li {
+.studio-address ul {
+  margin-top: 9px;
+}
+
+.studio-address .contacts-item:not(:first-child) {
   margin-top: 9px;
 }
 
@@ -416,14 +413,20 @@ footer .logo {
 }
 
 .projects > .item {
-  width: 370px;
-
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
 
   flex-basis: calc(100% / 3 - var(--card-set-gap));
 
-  border: 1px solid var(--project-card-outline);
+  /* border: 1px solid var(--project-card-outline); */
+}
+
+.project-information {
+  border-right: 1px solid var(--project-card-outline);
+  border-bottom: 1px solid var(--project-card-outline);
+  border-left: 1px solid var(--project-card-outline);
+
+  padding: 20px 24px;
 }
 
 .portfolio-section .link {
@@ -431,7 +434,7 @@ footer .logo {
 }
 
 .project-name {
-  margin: 20px 24px 4px;
+  margin-bottom: 4px;
 
   font-weight: 700;
   font-size: 18px;
@@ -440,8 +443,6 @@ footer .logo {
 }
 
 .project-type {
-  margin: 0 24px 20px;
-
   color: var(--secondary-text-color);
 
   font-size: 16px;
